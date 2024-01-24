@@ -2,12 +2,22 @@ package main
 
 import (
 	"fmt"
+
 	cache "github.com/homeworkCache/cache"
 )
 
 func main() {
-	c :=cache.NewCache()
-	fmt.Println(c.Set(2, 1))
-	fmt.Println(c.Get(2))
-	fmt.Println(c.Delete(2))
+	c := cache.NewCache()
+	userID:= 1
+	name := "Islom"
+
+	text :=c.Set(userID,name)
+	fmt.Println(text)
+
+	key,val := c.Get(userID)
+	fmt.Println(key,val)
+
+	text = c.Delete(userID)
+	fmt.Println(text)
+
 }

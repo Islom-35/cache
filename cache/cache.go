@@ -20,15 +20,15 @@ func (c *Cache) Set(key, value interface{}) string {
 	return "saved"
 }
 
-func (c *Cache) Get(key any) (interface{}, string) {
+func (c *Cache) Get(key any) (interface{}, any) {
 	c.mu.Lock()
 	defer c.mu.Unlock()
 	val, ok := c.data[key]
 
-	if ok == false {
+	if !ok {
 		return nil, "this doesn't exists"
 	}
-	return val, "ok"
+	return key, val 
 }
 
 func (c *Cache) Delete(key any) string {
