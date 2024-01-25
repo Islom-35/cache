@@ -8,14 +8,14 @@ import (
 
 func main() {
 	c := cache.NewCache()
-	userID:= 1
+	userID := 1
 	name := "Islom"
 
-	text :=c.Set(userID,name)
+	text := c.Set(userID, name)
 	fmt.Println(text)
 
-	key,val := c.Get(userID)
-	fmt.Println(key,val)
+	key, val := c.Get(userID)
+	fmt.Println(key, val)
 
 	text = c.Delete(userID)
 	fmt.Println(text)
