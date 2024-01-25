@@ -26,6 +26,6 @@ func main() {
 
 # Output
 
-saved\n
-1 Islom\n
+saved
+1 Islom
 deleted
