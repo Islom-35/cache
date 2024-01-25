@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	cache "github.com/islom-35/homeworkCache/cache"
+	cache "github.com/islom-35/homework/cache"
 )
 
 func main() {
